@@ -55,10 +55,10 @@ function App() {
     }
 
     return (
-    <main>
-        <Box background={background} color={color} text={text} subText={subText} />
-        <Inputs handleChangeBackground={handleChangeBackground} handleChangeColor={handleChangeColor} />
-    </main>
+        <main>
+            <Box background={background} color={color} text={text} subText={subText} />
+            <Inputs handleChangeBackground={handleChangeBackground} handleChangeColor={handleChangeColor} />
+        </main>
     );
 }
 
