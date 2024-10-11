@@ -17,6 +17,7 @@ function App() {
         let bgColor = color;
         let newText = !color || color === 'transparent' ? `There's no color` : color;
         let newSubText = convert(color);
+
         if(!isNaN(newText) && newText.length === 9) {
             let red = newText.slice(0, 3);
             let green = newText.slice(3, 6);
@@ -32,6 +33,7 @@ function App() {
             bgColor = rgb;
             newSubText = rgbToHex(Number(red), Number(green), Number(blue));
         }
+
         setText(newText);
         setBackground(bgColor);
         setSubText(newSubText);
