@@ -8,7 +8,7 @@ green
 ```
 
 To declare a rgb value, you have to put all the 3 digits segments.
-```css
+```js
 rgb(255, 0, 123)
 ```
 You'll have to enter:
