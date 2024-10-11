@@ -18,10 +18,10 @@ function App() {
         let newText = !color || color === 'transparent' ? `There's no color` : color;
         let newSubText = convert(color);
 
-        if(!isNaN(newText) && newText.length === 9) {
+        if(!isNaN(newText) && newText.length >= 9) {
             let red = newText.slice(0, 3);
             let green = newText.slice(3, 6);
-            let blue = newText.slice(6);
+            let blue = newText.slice(6, 9);
 
             if(red < 0 || red > 255) red = 255;
             if(green < 0 || green > 255) green = 255;
