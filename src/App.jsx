@@ -16,7 +16,7 @@ function App() {
     const handleChangeBackground = (color) => {
         let bgColor = color;
         let newText = !color || color === 'transparent' ? `There's no color` : color;
-        let newSubText = convert(color);
+        let newSubText;
 
         if(!isNaN(newText) && newText.length >= 9) {
             let red = newText.slice(0, 3);
@@ -32,7 +32,7 @@ function App() {
             newText = rgb;
             bgColor = rgb;
             newSubText = rgbToHex(Number(red), Number(green), Number(blue));
-        }
+        }else newSubText = convert(color);
 
         setText(newText);
         setBackground(bgColor);
