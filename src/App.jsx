@@ -14,10 +14,26 @@ function App() {
         setColor(newColor);
     }
     const handleChangeBackground = (color) => {
-        const newText = !color || color === 'transparent' ? `There's no color` : color;
+        let bgColor = color;
+        let newText = !color || color === 'transparent' ? `There's no color` : color;
+        let newSubText = convert(color);
+        if(!isNaN(newText) && newText.length === 9) {
+            let red = newText.slice(0, 3);
+            let green = newText.slice(3, 6);
+            let blue = newText.slice(6);
+
+            if(red < 0 || red > 255) red = 255;
+            if(green < 0 || green > 255) green = 255;
+            if(blue < 0 || blue > 255) blue = 255;
+
+            const rgb = `rgb(${Number(red)}, ${Number(green)}, ${Number(blue)})`;
+
+            newText = rgb;
+            bgColor = rgb;
+            newSubText = rgbToHex(Number(red), Number(green), Number(blue));
+        }
         setText(newText);
-        setBackground(color);
-        const newSubText = convert(color);
+        setBackground(bgColor);
         setSubText(newSubText);
     }
 
@@ -27,6 +43,15 @@ function App() {
             return colors[color.toLowerCase()];
         }
         return false;
+    }
+
+    const componentToHex = (c) => {
+        const hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+
+    const rgbToHex = (r, g, b) => {
+        return `#${componentToHex(r)}${componentToHex(g)}${componentToHex(b)}`;
     }
 
     return (
