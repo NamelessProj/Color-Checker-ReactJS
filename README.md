@@ -1,9 +1,19 @@
 # Introduction
-This is a simple color check project. You just have to enter a color `hex` or `name` example:
+This is a simple color check project. You just have to enter a color `hex`, `name` or `rgb` example:
 
 ```css
-green
 #00ff00
+green
+0002555000
+```
+
+To declare a rgb value, you have to put all the 3 digits segments.
+```css
+rgb(255, 0, 123)
+```
+You'll have to enter
+```js
+255000123
 ```
 
 # Installation
