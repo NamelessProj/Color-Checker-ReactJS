@@ -21,5 +21,9 @@ First you'll need to copy this repo.
 
 Then run: _(assuming you're in the project folder)_
 ```bash
+npm install
+```
+then
+```bash
 npm run dev
 ```
