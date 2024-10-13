@@ -15,7 +15,7 @@ function App() {
     }
     const handleChangeBackground = (color) => {
         let bgColor = color;
-        let newText = !color || color === 'transparent' ? `There's no color` : color;
+        let newText = !color || color === 'transparent' ? `There's no color` : color.toLowerCase();
         let newSubText;
 
         if(!isNaN(newText) && newText.length >= 9) {
