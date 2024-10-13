@@ -18,6 +18,8 @@ function App() {
         let newText = !color || color === 'transparent' ? `There's no color` : color.toLowerCase();
         let newSubText;
 
+        if(newText.length < 3) return;
+
         if(!isNaN(newText) && newText.length >= 9) {
             let red = newText.slice(0, 3);
             let green = newText.slice(3, 6);
