@@ -15,7 +15,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    background: radial-gradient(circle at center, #111, #000);
+    background: radial-gradient(circle at center, #222, #000);
     color: #eee;
     overflow: hidden;
 }
@@ -87,6 +87,7 @@ main{
     border-radius: 15px;
     border: 1px solid #eee;
     font-size: 25px;
+    backdrop-filter: blur(20px);
 }
 
 div:has(input){
