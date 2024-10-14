@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -89,6 +91,7 @@ main{
     font-size: 25px;
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px rgb(250 250 250 / .5);
+    font-family: "JetBrains Mono", monospace;
 }
 
 div:has(input){
