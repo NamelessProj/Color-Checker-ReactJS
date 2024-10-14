@@ -110,3 +110,8 @@ input{
     border: none;
     background: rgb(250 250 250 / .25);
 }
+
+button{
+    background: radial-gradient(circle at center, #5555, #8885);
+    box-shadow: 0 0 5px rgb(250 250 250 / .5);
+}
